@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<STYLE>
+.checkbox{
+appearence:none;
+width:fit-content;
+border-radius:5px;
+padding:unset;
+width:15px;
+height:15px;
+margin:0 5px;
+}
+.checkbox:checked{
+background-color:#6C757D;
+}
+.checkbox-container span{
+font-size:12px;
+}
+.progress-bar{
+    font-family: 'Wasted Vindey';                                          
+    border-left: 7px solid #343A40;
+    border-top: 7px solid #343A40;
+    border-right: 3px solid gray;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--circle);
+    box-shadow: inset #343A40 1px 1px 5px;
+}
+@media screen and (max-width:565px) and (min-width:320px) {
+    .container{
+        align-items: unset;
+    }
+    fieldset{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .button-container{
+        margin-top: 20px !important;
+    }
+    .progress-bar{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+        font-size: 15px;
+        border: none;
+        border-radius: 20px;
+        margin: 30px 0;
+        background-color: var(--progress-background);
+        justify-content: unset;
+        color: var(--progress-text);
+        outline: none;
+    }
+    .progress{
+        width: 65%;
+        height: 100%;
+        background-color: var(--progress-line);
+        border-radius: 20px;
+        margin: 9px 5px 9px 0;
+        outline: none;
+    }
+    .progress-bar span{
+        position: absolute;
+        left: 48%;
+    }
+    .checklist{
+        height: unset;
+    }
+    .right > span{
+        margin: 50px;
+        display: none;
+    }
+}
+fieldset{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+    column-gap: 30px;
+    border-radius: 35px;
+    padding: 30px;
+    background-color: var(--fieldset);
+    box-sizing:content-box;
+    border: none;
+}
+legend{
+    color: var(--legend-text);
+    font-size: 18px;
+}
+.left, .right{
+    display: flex;
+    flex-direction: column;
+}
+.left{
+    color: var(--left);
+}
+.left div{
+    margin:10px 5px;
+}
+.right{
+    text-align: center;
+    align-items: center;
+}
+.right > span{
+    margin: 25px 0;
+    font-size: 23px;
+    color: #212529;
+}
+</STYLE>
+</HEAD>
+<BODY background-color:#D3D3D3>
+<FORM>
+<FIELDSET>
+<DIV class='left'>
+<LABLE for='full-name:' ><H3> Full Name</H3> </LABLE> <input type='text' id='full-name' placeholder='what should we call u?'>
+<BR><BR>
+<LABLE for='email:' ><H3>EMail</H3></LABLE> <input type='text' id='email' placeholder='tell us ur email'>
+<BR><BR>
+<LABLE for='pwd:' ><H3>Password</H3></LABLE> <input type='password' id='pwd' placeholder='xxxxxxx' maxlength='7'>
+<BR><BR>
+<input class='checkbox' type='checkbox' aria-checked='false' aria-label='password is hidden'><span>Show password</span>
+<BR><BR>
+<LABLE for='pwd:' ><H3>Confirm Password</H3></LABLE> <input type='password' id='pwd' placeholder='xxxxxxx' maxlength='7'>
+<BR><BR>
+</DIV>
+<div class="right">
+                    <div class="progress-bar">
+                        <div class="progress"></div><span>65%</span>
+                    </div>
+                    <span>Profile Completeness</span>
+                    <div class="checklist"><H3>
+                        <span><del>Create Account</del></span><BR>
+                        <span><del>Update Roadmap Progress</del></span><BR>
+                        <span><del>Setup Public Profile</del></span><BR>
+                        <span>Complete your first project</span><BR>
+                        <span>Invite your Friends</span><BR></H3>
+                    </div>
+                </div>
+            </fieldset>
+<input type='submit' value='Update Profile'>
+</FORM>
+</BODY>
+</HTML>
+
